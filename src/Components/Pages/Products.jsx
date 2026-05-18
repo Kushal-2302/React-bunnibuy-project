@@ -24,7 +24,7 @@ const Products = () => {
         <>
             <div className="products">
                 <h1>Products</h1>
-
+                <button className='add-btn'>Add Products</button>
                 <div className="container">
                     {products.map((elem, index)=>{
                         let {id , image , title, category} = elem
