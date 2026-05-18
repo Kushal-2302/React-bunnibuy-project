@@ -4,6 +4,7 @@ import axios from 'axios'
 import DescriptionIcon from '@mui/icons-material/Description';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { useNavigate } from 'react-router-dom';
+import AddIcon from '@mui/icons-material/Add';
 
 const Products = () => {
     let [products , setProducts] = useState([])
@@ -19,14 +20,41 @@ const Products = () => {
     let handlevuewmore = (productId) => {
         navigate(`/adminportal/viewmore/${productId}`)
     }
-    console.log(products)
+    // console.log(products)
+
+    let filterCat = ["All" , "men's clothing" , "women's clothing" , "electronics" , "jewelery"]
+    let [bool , setBool] = useState(true)
+    let [categoryData , setCategoryData] = useState([])
+    let handleFilter = (e) => {
+        let btnText = e.target.innerText;
+
+        let filteredArray = products.filter((elem) => {
+            return (elem.category === btnText)
+        })
+        if(btnText === 'All'){
+            setCategoryData(products);
+        }else{
+            setCategoryData(filteredArray);
+        }
+    }
+
     return (
         <>
             <div className="products">
                 <h1>Products</h1>
-                <button className='add-btn'>Add Products</button>
+                <button onClick={()=>navigate('/adminportal/addproducts')} className='add-btn'><p>Add Products</p> <span><AddIcon/></span></button>
+                <div className="filter-btn">
+                    {filterCat.map((elem , index)=>{
+                        return (
+                            <li key={index}>
+                                {/* <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png" alt="" /> */}
+                                <button onClick={handleFilter}>{elem}</button>
+                            </li>
+                        )
+                    })}
+                </div>
                 <div className="container">
-                    {products.map((elem, index)=>{
+                    {(categoryData).map((elem, index)=>{
                         let {id , image , title, category} = elem
                         return (
                             <div className="card" key={index}>

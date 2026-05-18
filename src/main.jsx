@@ -8,5 +8,5 @@ createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <App />
     <ToastContainer autoClose={1000} />
-  </BrowserRouter>,
+  </BrowserRouter>
 )

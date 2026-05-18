@@ -171,7 +171,47 @@
     color: gray;
     text-shadow: 1px 1px 2px orangered;
   }
-  .add-btn{
+  .add-btn {
+    display: flex;
+    align-items: center;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-left: 20px;
+    transition: 0.5s;
+  }
+  .add-btn:hover {
+    transform: scale(0.9);
+    box-shadow: 1px 1px 14px black;
+  }
+  .filter-btn {
+    display: flex;
+    justify-content: center;
+    li {
+      list-style: none;
+      /* background: red; */
+
+      button {
+        margin: 2vh 3vh;
+        padding: 1vh 3vh;
+        color: white;
+        background: rgb(255, 97, 40);
+        border: none;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      button:hover {
+        transform: scale(1.1);
+        box-shadow: 1px 1px 10px black;
+      }
+    }
+  }
+  .add-btn {
     padding: 10px;
     cursor: pointer;
   }
@@ -286,29 +326,29 @@
     .left {
       width: 50%;
       padding: 0 20px;
-      h2{
+      h2 {
         font-size: 40px;
         color: rgb(255, 103, 47);
       }
-      p{
+      p {
         text-align: justify;
         text-indent: 100px;
         padding: 10px 0;
         line-height: 30px;
         color: gray;
       }
-      .social-media{
+      .social-media {
         /* background: green; */
-        button{
-            background: none;
-            border: none;
-            margin: 0 20px;
-            color:  rgb(255, 103, 47);
-            cursor: pointer;
-            transition: all .3s;
+        button {
+          background: none;
+          border: none;
+          margin: 0 20px;
+          color: rgb(255, 103, 47);
+          cursor: pointer;
+          transition: all 0.3s;
         }
-        button:hover{
-            transform: scale(1.2);
+        button:hover {
+          transform: scale(1.2);
         }
       }
     }
@@ -428,7 +468,53 @@
   }
 }
 
+.add-products {
+  h1 {
+    text-align: center;
+    margin: 20px;
+    color: gray;
+    text-shadow: 1px 1px 10px coral;
+  }
+  .formbox {
+    width: 90%;
+    margin: 2vh auto;
+    background: rgb(255, 233, 226);
+    form {
+      
+      .inputfields {
+        display: grid;
+        grid-template-columns: auto auto;
 
+        input,
+        select {
+          margin: 2vh;
+          font-size: 18px;
+          padding: 10px;
+        }
+      }
+      .btn {
+        display: flex;
+        button {
+          width: 30%;
+          padding: 10px;
+          margin: 20px auto;
+          border-radius: 10px;
+          border: none;
+          background: rgb(255, 98, 41);
+          font-weight: bold;
+          color: white;
+          cursor: pointer;
+          transition: all .3s;
+          box-shadow: 1px 1px 8px gray;
+        }
+        button:hover{
+          transform: scale(1.1);
+          box-shadow: 1px 1px 14px black;
+        }
+      }
+    }
+  }
+}
 
 /* ================= RESPONSIVE DESIGN ================= */
 

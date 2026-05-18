@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { toast } from "react-toastify";
 import { useNavigate, useParams } from 'react-router-dom'
 import StarIcon from '@mui/icons-material/Star';
  import DeleteIcon from '@mui/icons-material/Delete';
@@ -32,10 +33,11 @@ const ViewMore = () => {
         let bool = window.confirm('Do you want to delete this product')
         if(bool){
             axios.delete(`http://localhost:4000/products/${id}`);
-            alert('Product is Deleted');
+            // alert('Product is Deleted');
+            toast.success('Product is Deleted')
             navigate(`/adminportal/products`)
         } else {
-            alert('Product is not Deleted')
+            toast.error('Product is not Deleted')
         }
     }
     
