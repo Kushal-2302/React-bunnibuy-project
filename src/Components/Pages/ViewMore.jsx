@@ -27,6 +27,17 @@ const ViewMore = () => {
     }
 
     let {id , title , price , description , category , image , rating} = oneProduct;
+
+    let handledelete = () => {
+        let bool = window.confirm('Do you want to delete this product')
+        if(bool){
+            axios.delete(`http://localhost:4000/products/${id}`);
+            alert('Product is Deleted');
+            navigate(`/adminportal/products`)
+        } else {
+            alert('Product is not Deleted')
+        }
+    }
     
     return (
         <div className="viewmore">
@@ -43,7 +54,7 @@ const ViewMore = () => {
                     <div className="cat">Category : {category}</div>
                     <div className="rating">{rating?.rate} <span><StarIcon/></span> </div>
                     <div className="count">{rating?.count}</div>
-                    <button className='dlt'>Delete <span><DeleteIcon/></span></button>
+                    <button className='dlt' onClick={()=>handledelete()}>Delete <span><DeleteIcon/></span></button>
                 </div>
             </div>
         </div>
