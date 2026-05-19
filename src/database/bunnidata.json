@@ -215,6 +215,56 @@
         "rate": 3.6,
         "count": 145
       }
+    },
+    {
+      "title": "watch",
+      "price": "40",
+      "description": "It is from England",
+      "category": "electronics",
+      "image": "https://cdn.pixabay.com/photo/2014/12/08/14/23/pocket-watch-560937_1280.jpg",
+      "rating": {
+        "rate": "4.8",
+        "count": "120"
+      },
+      "id": "D8_QJtVQlUc"
+    },
+    {
+      "title": "Gold",
+      "price": "80",
+      "description": "djskjfhskjghkjfgkjfhg kjsdkjsdhfh kjhs df",
+      "category": "jewelery",
+      "image": "https://cdn.pixabay.com/photo/2014/11/01/22/33/gold-513062_1280.jpg",
+      "rating": {
+        "rate": "5",
+        "count": "150"
+      },
+      "id": "RRPVpFE_q4A"
+    }
+  ],
+  "users": [
+    {
+      "username": "kushal",
+      "contact": "7204689943",
+      "email": "kushal@gmail.com",
+      "password": "Kushal@123",
+      "date": "2026-05-07",
+      "id": "Z-_Dlqw4MAs"
+    },
+    {
+      "username": "kushal",
+      "contact": "7204689943",
+      "email": "kushal@gmail.com",
+      "password": "Kushal@123",
+      "date": "2026-05-07",
+      "id": "86J85rh3GNA"
+    },
+    {
+      "username": "kumar",
+      "contact": "9876543215",
+      "email": "kumar@gmail.com",
+      "password": "kumar@123",
+      "date": "2026-05-16",
+      "id": "dzT2QMqgVHU"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

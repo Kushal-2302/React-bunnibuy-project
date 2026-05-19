@@ -6,6 +6,7 @@ import Navbar from '../Navbar'
 import About from '../Pages/About'
 import ViewMore from '../Pages/ViewMore'
 import AddProducts from './AddProducts'
+import AddUsers from './AddUsers'
 
 const AdminPortal = () => {
     return (
@@ -17,6 +18,7 @@ const AdminPortal = () => {
                 <Route element={<About/>} path='/about'/>
                 <Route element={<ViewMore/>} path='/viewmore/:id'/>
                 <Route element={<AddProducts/>} path='/addproducts'/>
+                <Route element={<AddUsers/>} path='/addusers'/>
             </Routes>
         </div>
     )

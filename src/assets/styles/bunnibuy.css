@@ -468,6 +468,7 @@
   }
 }
 
+/* Add Products Design */
 .add-products {
   h1 {
     text-align: center;
@@ -488,8 +489,9 @@
         input,
         select {
           margin: 2vh;
-          font-size: 18px;
+          font-size: 16px;
           padding: 10px;
+          border-radius: 10px;
         }
       }
       .btn {
@@ -511,6 +513,24 @@
           transform: scale(1.1);
           box-shadow: 1px 1px 14px black;
         }
+      }
+    }
+  }
+}
+
+/* Add Users Design */
+.add-users{
+  h1{
+
+  }
+  .formbox{
+    background: red;
+    form{
+      display: flex;
+      flex-direction: column;
+      margin: 150px 50px;
+      input{
+        width: 30%;
       }
     }
   }

@@ -17,13 +17,12 @@ const Products = () => {
         fetchApi()
     },[])
 
-    let handlevuewmore = (productId) => {
+    let handleviewmore = (productId) => {
         navigate(`/adminportal/viewmore/${productId}`)
     }
     // console.log(products)
 
     let filterCat = ["All" , "men's clothing" , "women's clothing" , "electronics" , "jewelery"]
-    let [bool , setBool] = useState(true)
     let [categoryData , setCategoryData] = useState([])
     let handleFilter = (e) => {
         let btnText = e.target.innerText;
@@ -47,7 +46,6 @@ const Products = () => {
                     {filterCat.map((elem , index)=>{
                         return (
                             <li key={index}>
-                                {/* <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png" alt="" /> */}
                                 <button onClick={handleFilter}>{elem}</button>
                             </li>
                         )
@@ -65,7 +63,7 @@ const Products = () => {
                                 <div className="image"><img src={image} alt="No Image" /></div>
                                 <div className="title">{title}</div>
                                 <div className="btns">
-                                    <button className='view' onClick={()=>handlevuewmore(id)}><p>View More</p>&nbsp;<DescriptionIcon/></button>
+                                    <button className='view' onClick={()=>handleviewmore(id)}><p>View More</p>&nbsp;<DescriptionIcon/></button>
                                 </div>
                             </div>
                         )

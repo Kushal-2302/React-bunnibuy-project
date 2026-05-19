@@ -24,6 +24,9 @@ const Navbar = () => {
             <NavLink to="/adminportal/products">Products</NavLink>
           </li>
           <li>
+            <NavLink to="/adminportal/addusers">AddUsers</NavLink>
+          </li>
+          <li>
             <button onClick={handlelogout}>Logout</button>
           </li>
         </ul>
