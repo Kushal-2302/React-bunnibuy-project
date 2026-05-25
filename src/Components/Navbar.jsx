@@ -27,8 +27,12 @@ const Navbar = () => {
             <NavLink to="/adminportal/addusers">AddUsers</NavLink>
           </li>
           <li>
+            <NavLink to="/adminportal/cartitems">CartItems</NavLink>
+          </li>
+          <li>
             <button onClick={handlelogout}>Logout</button>
           </li>
+          
         </ul>
       </div>
     </div>
