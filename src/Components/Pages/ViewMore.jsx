@@ -21,7 +21,7 @@ const ViewMore = () => {
     useEffect(()=>{
         fetchApi()
     },[])
-    // console.log(oneProduct);
+    console.log(oneProduct);
 
     let handleback = () => {
         navigate(`/adminportal/products`)
@@ -40,6 +40,17 @@ const ViewMore = () => {
             toast.error('Product is not Deleted')
         }
     }
+
+    let addToCart = () => {
+        let bool = window.confirm("Do you want to add this product to cart items...");
+        if(bool){
+             axios.post(`http://localhost:4000/cartitems`,oneProduct)
+             toast.success(`Product is Added to Cart`)
+        } else {
+            toast.info(`Product is not added`)
+        }
+       
+    }
     
     return (
         <div className="viewmore">
@@ -57,6 +68,7 @@ const ViewMore = () => {
                     <div className="rating">{rating?.rate} <span><StarIcon/></span> </div>
                     <div className="count">{rating?.count}</div>
                     <button className='dlt' onClick={()=>handledelete()}>Delete <span><DeleteIcon/></span></button>
+                    <button onClick={()=>addToCart()}>Add to Cart</button>
                 </div>
             </div>
         </div>
