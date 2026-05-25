@@ -20,7 +20,7 @@ const Products = () => {
     let handleviewmore = (productId) => {
         navigate(`/adminportal/viewmore/${productId}`)
     }
-    // console.log(products)
+    console.log(products)
 
     let filterCat = ["All" , "men's clothing" , "women's clothing" , "electronics" , "jewelery"]
     let [categoryData , setCategoryData] = useState([])
